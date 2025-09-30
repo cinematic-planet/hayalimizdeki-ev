@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Birlikte Kahvaltı</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(to bottom, #fff8dc, #fdf6e3);
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 48px;
+      color: #d2691e;
+      margin-bottom: 10px;
+    }
+
+    p.siir {
+      font-size: 20px;
+      font-style: slanted;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .mutfak {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .caydanlik {
+      position: relativecent;
+      width: 480px;
+      
+    }
+    .caydanlik {
+      position: relative;
+      width: 350px;
+      margin: 0 auto;
+    }
+
+    .caydanlik img {
+      width: 100%;
+    }
+
+    .buhar {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .caydanlik:hover .buhar {
+      opacity: 1;
+      animation: buharAnimasyonu 3s ease-in-out infinite;
+    }
+
+    @keyframes buharAnimasyonu {
+      0% { transform: translateY(0) scale(1); opacity: 0.4; }
+      100% { transform: translateY(-40px) scale(1.2); opacity: 0; }
+    }
+
+    .masa img {
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .geri-don {
+      margin-top: 60px;
+    }
+
+    .geri-don a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #d2691e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .geri-don a:hover {
+      background-color: #a0522d;
+    }
+
+    .hatiralar {
+      margin-top: 80px;
+      padding: 20px;
+      background-color: #f5e9d6;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .hatiralar h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 32px;
+      color: #a0522d;
+      margin-bottom: 10px;
+    }
+
+    .hatiralar p {
+      font-size: 18px;
+      color: #444;
+      font-style: slanted;
+      font-weight: bold
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Birlikte Kahvaltı</h1>
+  <p class="siir">Yemek yemek üstüne ne düşünürsünüz bilmem ama kahvaltının mutlulukla bir ilgisi olmalı. </p>
+  <div class="caydanlik">
+      <img src="images/caydanlik.jpg" alt="Çaydanlık">
+      <div class="buhar"></div>
+    </div>
+  </div>
+
+  <div class="hatiralar">
+    <h2>Hatırladıkça Gülümsediğim Sabahlar</h2>
+    <p>Birlikte uyandığımız o sabahlar... Çayın kokusu, senin sessizce gülümseyişin, pencere kenarındaki ışık. Hepsi hâlâ burada.</p>
+  </div>
+
+  <div class="geri-don">
+    <a href="index.html">← Ana Sayfaya Dön</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Emre ™ Kalbinden X'e
+    <p>Bu site, hayal gücünün ve duyguların dijital bir yansımasıdır. Gerçeklikten kaçış değil, duygusal bir yolculuktur.</p>
+    <p>İletişim: <a>E-mail: "contrakts@windowslive.com"</a></p>
+  </footer>
+</body>
+</html>
