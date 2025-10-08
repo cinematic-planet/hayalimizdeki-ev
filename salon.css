@@ -1,0 +1,83 @@
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #1a1a2e;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    
+    canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 48px;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+
+    #salon img {
+      max-width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .geri-don {
+      margin-top: 60px;
+    }
+
+    .geri-don a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #e6c200;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .geri-don a:hover {
+      background-color: #ffd700;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
