@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sana Söyleyemediklerim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/sana.css">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <div class="content">
+    <h1>Sana Söyleyemediklerim</h1>
+    <p>X, bu sayfa bizim hiç yaşanmamış ama hep yaşanmış gibi hissettiren evimizin dijital hali.  
+  Seni unutamıyorum çünkü seninle kurduğum hayaller, gerçeklerden daha gerçekti.</p>
+
+  <div class="geri-don"><a href="index.html">← Ana Sayfaya Dön</a></div>
+
+  <textarea placeholder="Buraya yazamadığın şeyleri yazabilirsin..."></textarea>
+
+<script>
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let stars = [];
+    for (let i = 0; i < 150; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.5,
+        speed: Math.random() * 0.3
+      });
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#fff';
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(drawStars);
+    }
+
+    drawStars();
+  </script>
+</body>
+</html>
