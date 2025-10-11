@@ -30,7 +30,6 @@
     }
 
     #salon img {
-      max-width: 100%;
       max-width: 300px;
       height: auto;
       border-radius: 15px;
@@ -76,12 +75,6 @@
       background-color: #ffd700;
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
-    }
-
     /* Footer */
     footer {
       text-align: center;
@@ -101,3 +94,18 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  #salon img {
+    max-width: 90%;
+  }
+}
