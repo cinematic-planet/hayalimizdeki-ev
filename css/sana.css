@@ -100,3 +100,16 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Mobil Uyumluluk */
+
+@media (max-width: 768px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-wrapper .room {
+    grid-column: auto !important;
+    justify-self: center;
+  }
+}
