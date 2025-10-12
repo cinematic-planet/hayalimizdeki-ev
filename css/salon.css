@@ -18,7 +18,10 @@ html, body {
 /* Ana içerik */
 main {
   flex: 1;
-  padding: 20px;
+  padding: 100px 20px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* Başlık */
@@ -26,16 +29,16 @@ h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 48px;
   color: #ffd700;
-  margin-top: 40px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 /* Şiirsel paragraf */
-.siir {
+#salon p {
   font-style: italic;
-  text-align: center;
-  margin-bottom: 40px;
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
 }
 
 /* Görsel */
@@ -47,31 +50,9 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Paragraflar */
-p {
-  font-size: 20px;
-  max-width: 600px;
-  margin: auto;
-  line-height: 1.6;
-}
-
-/* Linkler */
-a {
-  display: inline-block;
-  margin-top: 30px;
-  color: #ffd700;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Geri dönüş */
+/* Geri dönüş bağlantısı */
 .geri-don {
-  margin-top: 60px;
-  text-align: center;
+  margin-top: 40px;
 }
 
 .geri-don a {
@@ -123,21 +104,13 @@ canvas {
   z-index: -2;
 }
 
-/* İçerik katmanı */
-.content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 100px 20px;
-}
-
 /* Mobil uyumluluk */
 @media (max-width: 600px) {
   h1 {
     font-size: 32px;
   }
 
-  p {
+  #salon p {
     font-size: 18px;
     padding: 0 10px;
   }
