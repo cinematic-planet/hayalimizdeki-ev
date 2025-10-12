@@ -4,59 +4,71 @@
   <meta charset="UTF-8">
   <title>Çalışma Odası – Hayallerin Peşinden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Çalışma Odası - Hayalimizdeki Ev">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fira+Code&family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/calismaodasi.css">
 </head>
 <body>
-
   <canvas id="stars"></canvas>
 
-  <h1>Hayallerin Peşinden</h1>
-  <p>Sen resim yaparken, ben tasarım yapıyordum. Aynı odada, farklı dünyalar! 
-  Ama hayallerimiz hep aynı pencereden dışarı bakıyordu.</p>
+  <div class="wrapper">
+    <main>
+      <h1>Hayallerin Peşinden</h1>
+      <p class="siir">Sen resim yaparken, ben tasarım yapıyordum. Aynı odada, farklı dünyalar!  
+      Ama hayallerimiz hep aynı pencereden dışarı bakıyordu.</p>
 
-  <div class="geri-don"><a href="index.html">← Ana Sayfaya Dön</a></div>
+      <div class="geri-don">
+        <a href="index.html">← Ana Sayfaya Dön</a>
+      </div>
+    </main>
 
-  <footer>
-    Copyright&copy; 2025 Emre ™ 
-    <p>Bu site, hayal gücünün ve duyguların dijital bir yansımasıdır. Gerçeklikten kaçış değil, duygusal bir yolculuktur.</p>
-    <p>İletişim: <a href="mailto:contrakts@windowslive.com">contrakts@windowslive.com</a></p>
-  </footer>
-
+    <footer>
+      <p>Copyright&copy; 2025 Emre ™</p>
+      <p>Bu site, hayal gücünün ve duyguların dijital bir yansımasıdır. Gerçeklikten kaçış değil, duygusal bir yolculuktur.</p>
+      <p>İletişim: <a href="mailto:contrakts@windowslive.com">contrakts@windowslive.com</a></p>
+    </footer>
+  </div>
 
   <script>
-    const canvas = document.getElementById('stars');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    window.onload = function () {
+      const canvas = document.getElementById('stars');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-    let stars = [];
-    for (let i = 0; i < 150; i++) {
-      stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 1.5,
-        speed: Math.random() * 0.3
-      });
-    }
-
-    function drawStars() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#fff';
-      for (let star of stars) {
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fill();
-        star.y += star.speed;
-        if (star.y > canvas.height) {
-          star.y = 0;
-          star.x = Math.random() * canvas.width;
-        }
+      let stars = [];
+      for (let i = 0; i < 150; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5,
+          speed: Math.random() * 0.3
+        });
       }
-      requestAnimationFrame(drawStars);
-    }
 
-    drawStars();
+      function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#fff';
+        for (let star of stars) {
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+          ctx.fill();
+          star.y += star.speed;
+          if (star.y > canvas.height) {
+            star.y = 0;
+            star.x = Math.random() * canvas.width;
+          }
+        }
+        requestAnimationFrame(drawStars);
+      }
+
+      drawStars();
+
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    };
   </script>
 </body>
 </html>

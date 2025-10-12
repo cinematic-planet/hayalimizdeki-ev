@@ -1,137 +1,113 @@
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background: linear-gradient(to bottom, #fff8dc, #fdf6e3);
-      color: #333;
-      text-align: center;
-      padding: 40px 20px;
-    }
+/* Sayfa yüksekliği ve hizalama */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  background-color: #fffdf8;
+  color: #333;
+}
 
-    h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 48px;
-      color: #d2691e;
-      margin-bottom: 10px;
-    }
+/* Wrapper yapısı */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-    p.siir {
-      font-size: 20px;
-      font-style: italic;
-      font-weight: bold;
-      color: #555;
-      margin-bottom: 40px;
-    }
+/* Ana içerik */
+main {
+  flex: 1;
+  padding: 20px;
+}
 
-    .mutfak {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      gap: 60px;
-      flex-wrap: wrap;
-    }
-    .caydanlik {
-      position: relative;
-      width: 350px;
-      margin: 0 auto;
-    }
+/* Başlık ve şiir */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 30px;
+}
 
-    .caydanlik img {
-      width: 100%;
-    }
+.siir {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 40px;
+}
 
-    .buhar {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.4);
-      opacity: 0;
-      transition: opacity 0.8s ease;
-    }
+/* Görsel alan */
+.caydanlik {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .caydanlik:hover .buhar {
-      opacity: 1;
-      animation: buharAnimasyonu 3s ease-in-out infinite;
-    }
+.caydanlik img {
+  width: 200px;
+  height: auto;
+}
 
-    @keyframes buharAnimasyonu {
-      0% { transform: translateY(0) scale(1); opacity: 0.4; }
-      100% { transform: translateY(-40px) scale(1.2); opacity: 0; }
-    }
-    
-    .geri-don {
-      margin-top: 60px;
-    }
+/* Buhar efekti (isteğe bağlı animasyon) */
+.buhar {
+  width: 10px;
+  height: 40px;
+  margin: 0 auto;
+  background: linear-gradient(to top, rgba(255,255,255,0.5), transparent);
+  animation: buhar 2s infinite;
+}
 
-    .geri-don a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #d2691e;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
+@keyframes buhar {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-20px); opacity: 0; }
+}
 
-    .geri-don a:hover {
-      background-color: #a0522d;
-    }
+/* Hatıralar bölümü */
+.hatiralar {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
 
-    .hatiralar {
-      margin-top: 80px;
-      padding: 20px;
-      background-color: #f5e9d6;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+.hatiralar h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
 
-    .hatiralar h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 32px;
-      color: #a0522d;
-      margin-bottom: 10px;
-    }
+/* Geri dönüş bağlantısı */
+.geri-don {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .hatiralar p {
-      font-size: 18px;
-      color: #444;
-      font-style: italic;
-      font-weight: bold
-    }
+.geri-don a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #888;
-      background-color: #f9f9f9;
-      border-top: 1px solid #e0e0e0;
-    }
+.geri-don a:hover {
+  text-decoration: underline;
+}
 
-    footer a {
-      color: #888;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer p {
+  margin: 8px 0;
+}
 
-    /* Mobil Uyumluluk */
+footer a {
+  color: #007BFF; /* Mavi ton */
+  text-decoration: none;
+  font-weight: bold;
+}
 
-@media (max-width: 768px) {
-  .grid-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-wrapper .room {
-    grid-column: auto !important;
-    justify-self: center;
-  }
+footer a:hover {
+  text-decoration: underline;
 }

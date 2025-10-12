@@ -1,101 +1,107 @@
-body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background-color: #1a1a2e;
-      color: #f0f0f0;
-      text-align: center;
-      padding: 100px 20px;
-    }
+/* Sayfa yüksekliği ve hizalama */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  background-color: #0f0f1a;
+  color: #f0f0f0;
+}
 
-    canvas {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
+/* Wrapper yapısı */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-    .content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 100px 20px;
-    }
+/* Ana içerik */
+main {
+  flex: 1;
+  padding: 20px;
+}
 
-    h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 48px;
-      color: #ffd700;
-      margin-bottom: 20px;
-    }
+/* Başlık */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 40px;
+  color: #ffd700;
+}
 
-    p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-    }
+/* Şiirsel paragraf */
+.siir {
+  text-align: center;
+  font-style: italic;
+  margin: 20px auto 40px;
+  max-width: 600px;
+  line-height: 1.6;
+}
 
-    a {
-      display: inline-block;
-      margin-top: 40px;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* Geri dönüş bağlantısı */
+.geri-don {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.geri-don a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e6c200;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-    .geri-don {
-      margin-top: 60px;
-    }
+.geri-don a:hover {
+  background-color: #ffd700;
+}
 
-    .geri-don a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #e6c200;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+}
 
-    .geri-don a:hover {
-      background-color: #ffd700;
-    }
+footer p {
+  margin: 8px 0;
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #888;
-      background-color: #f9f9f9;
-      border-top: 1px solid #e0e0e0;
-    }
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    footer a {
-      color: #888;
-      text-decoration: none;
-      font-weight: bold;
-    }
+footer a:hover {
+  text-decoration: underline;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+/* Canvas arka plan */
+canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
 
-    /* Mobil Uyumluluk */
-
-@media (max-width: 768px) {
-  .grid-wrapper {
-    grid-template-columns: 1fr;
+/* Mobil uyumluluk */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
   }
 
-  .grid-wrapper .room {
-    grid-column: auto !important;
-    justify-self: center;
+  .siir {
+    font-size: 18px;
+    padding: 0 10px;
   }
 }

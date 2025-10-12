@@ -1,101 +1,138 @@
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background-color: #1a1a2e;
-      color: #f0f0f0;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    
-    canvas {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
+/* Sayfa yüksekliği ve hizalama */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  background-color: #1a1a2e;
+  color: #f0f0f0;
+}
 
-    .content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 100px 20px;
-    }
+/* Wrapper yapısı */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-    h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 48px;
-      color: #ffd700;
-      margin-bottom: 20px;
-    }
+/* Ana içerik */
+main {
+  flex: 1;
+  padding: 20px;
+}
 
-    #salon img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      margin-bottom: 30px;
-    }
+/* Başlık */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  color: #ffd700;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
+/* Şiirsel paragraf */
+.siir {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .geri-don {
-      margin-top: 60px;
-    }
+/* Görsel */
+#salon img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+}
 
-    .geri-don a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #e6c200;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
+/* Paragraflar */
+p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
 
-    .geri-don a:hover {
-      background-color: #ffd700;
-    }
+/* Linkler */
+a {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #888;
-      background-color: #f9f9f9;
-      border-top: 1px solid #e0e0e0;
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    footer a {
-      color: #888;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* Geri dönüş */
+.geri-don {
+  margin-top: 60px;
+  text-align: center;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+.geri-don a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e6c200;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-    @media (max-width: 600px) {
+.geri-don a:hover {
+  background-color: #ffd700;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Canvas arka plan */
+canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+/* İçerik katmanı */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 600px) {
   h1 {
     font-size: 32px;
   }
@@ -107,18 +144,5 @@
 
   #salon img {
     max-width: 90%;
-  }
-}
-
-/* Mobil Uyumluluk */
-
-@media (max-width: 768px) {
-  .grid-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-wrapper .room {
-    grid-column: auto !important;
-    justify-self: center;
   }
 }

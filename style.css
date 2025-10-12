@@ -137,21 +137,6 @@ section {
   margin-bottom: 15px;
 }
 
-/* Müzik */
-audio {
-  display: block;
-  margin: -10px auto;
-  width: 250px;
-  background-color: transparent;
-  filter: (1.2);
-}
-
-.audio-wrapper {
-  text-align: center;
-  background-color: transparent;
-  padding: 10px;
-}
-
 /* Form Elemanları */
 textarea {
   width: 100%;
@@ -180,6 +165,11 @@ footer {
   color: #888;
   background-color: #f9f9f9;
   border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 8px 0;
 }
 
 footer a {
