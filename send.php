@@ -1,6 +1,6 @@
 <?php
-if ($SERVER)["REQUEST_METHOD"] == "POST") {
-    $mesaj = htmlspecialchars($POST)["mesaj"]);
+if ($SERVER["REQUEST_METHOD"] == "POST") {
+    $mesaj = htmlspecialchars($POST["mesaj"]);
     $to = "contrakts@windowslive.com";
     $subject = "Yeni Mesaj: Sana Söyleyemediklerim";
     $headers = "From: info@xxxxxx.com\r\n";
