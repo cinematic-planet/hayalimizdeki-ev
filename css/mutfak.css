@@ -4,19 +4,21 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'Lato', sans-serif;
-  background-color: #fffdf8;
-  color: #333;
+  background-color: #0a0a1a;
+  color: #f0f0f0;
 }
 
 /* Wrapper yapısı */
 .wrapper {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Ana içerik */
 main {
+  flex-grow: 1;
+  flex-shrink: 0;
   flex: 1;
   padding: 20px;
 }
@@ -26,7 +28,8 @@ h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 2.5em;
   text-align: center;
-  margin-top: 30px;
+  color: #ffd700;
+  margin-top: 40px;
 }
 
 .siir {
@@ -52,12 +55,12 @@ h1 {
   height: 40px;
   margin: 0 auto;
   background: linear-gradient(to top, rgba(255,255,255,0.5), transparent);
-  animation: buhar 2s infinite;
+  animation: buhar 5s infinite;
 }
 
 @keyframes buhar {
   0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(20px); opacity: 0; }
 }
 
 /* Hatıralar bölümü */
@@ -79,13 +82,18 @@ h1 {
 }
 
 .geri-don a {
-  color: #007BFF;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e6c200;
+  color: #fff;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .geri-don a:hover {
-  text-decoration: underline;
+  background-color: #ffd700;
 }
 
 /* Footer */
@@ -96,6 +104,7 @@ footer {
   color: #888;
   background-color: #f9f9f9;
   border-top: 1px solid #e0e0e0;
+  margin-top: auto;
 }
 
 footer p {
@@ -110,4 +119,43 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Canvas arka plan */
+canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  #salon p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  #salon img {
+    max-width: 90%;
+  }
+}/* Mobil uyumluluk */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  #salon p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  #salon img {
+    max-width: 90%;
+  }
 }
