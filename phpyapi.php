@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hayalimizdeki Ev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hayalimizdeki Ev - Duygusal bir dijital yolculuk.">
+  <meta property="og:title" content="Hayalimizdeki Ev">
+  <meta property="og:image" content="images/background3.jpg">
+  <meta property="og:description" content="Bu ev hiç inşa edilmedi belki, ama kalbimizde hep vardı.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <header>
+    <div>
+      <h1>Hayalimizdeki Ev</h1>
+      <p>“Bu ev hiç inşa edilmedi belki, ama kalbimizde hep vardı.”</p>
+    </div>
+  </header>
+
+<section class="social-media">
+  <h2>Beni Dijitalde Bul</h2>
+  <div class="social-icons">
+    <a href="https://www.tiktok.com/@cinematic.planet" target="_blank" title="TikTok">
+      <img src="icons/tiktok.png" alt="TikTok">
+    </a>
+    <a href="https://instagram.com/cinematicplanet_" target="_blank" title="Instagram">
+      <img src="icons/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://twitter.com/yourusername" target="_blank" title="Twitter / X">
+      <img src="icons/x.png" alt="Twitter">
+    </a>
+    <a href="https://github.com/cinematic-planet" target="_blank" title="GitHub">
+      <img src="icons/github.png" alt="GitHub">
+    </a>
+    <a href="mailto:cinematic.planet1@gmail.com" title="E-posta">
+      <img src="icons/eposta.png" alt="E-posta">
+    </a>
+  </div>
+</section>
+
+<section class="grid-wrapper">
+    <div class="room">
+      <h2><a href="mutfak.html">Mutfak</a></h2>
+      <img src="images/mutfak.jpg" alt="Mutfakta romantik kahvaltı sahnesi">
+      <p>Sen kahvaltı hazırlıyordun, bende sana yardım ediyordum. Sessizlik bile huzurdu.</p>
+    </div>
+
+    <div class="room">
+      <h2><a href="salon.html">Salon</a></h2>
+      <img src="images/salon.jpg" alt="Battaniye altında film gecesi">
+      <p>Omuzlarımızdan sarkan battaniye ve ellerimizde birer fincan kahve, senin seçtiğin romantik filmler...</p>
+    </div>
+
+    <div class="room">
+      <h2><a href="calismaodasi.html">Çalışma Odası</a></h2>
+      <img src="images/calisma-odasi.jpg" alt="Yaratıcı çalışma ortamı">
+    </div>
+
+    <div class="room">
+      <h2><a href="balkon.html">Balkon</a></h2>
+      <img src="images/balkon.jpeg" alt="Yıldızlı balkon manzarası">
+      <p>Yıldızlara bakarken, “bir gün gerçekten burada olacağız” demiştin.</p>
+    </div>
+
+    <div class="room">
+      <h2><a href="sanasoyleyemediklerim.html">Sana Söyleyemediklerim</a></h2>
+      <img src="images/mektup.jpg" alt="Duygusal mektup sayfası">
+      <p>X, bu sayfa bizim hiç yaşanmamış ama hep yaşanmış gibi hissettiren evimizin dijital hali. Seni unutamıyorum çünkü seninle kurduğum hayaller, gerçeklerden daha gerçekti.</p>
+    </div>
+</section>
+
+  <footer>
+    <p>Copyright&copy; 2025 Emre ™</p>
+    <p>Bu site, hayal gücünün ve duyguların dijital bir yansımasıdır. Gerçeklikten kaçış değil, duygusal bir yolculuktur.</p>
+      <p>İletişim: <a href="mailto:cinematic.planet1@gmail.com">cinematic.planet1@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    let stars = [];
+    for (let i = 0; i < 100; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.5,
+        speed: Math.random() * 0.5
+      });
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#fff';
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(drawStars);
+    }
+
+    drawStars();
+  </script>
+
+</body>
+</html>
