@@ -1,0 +1,20 @@
+{
+  "name": "hayalimizdeki-ev",
+  "version": "1.0.0",
+  "description": "**Hayalimizdeki Ev**, modern mimariyi ve kullanıcı odaklı tasarımı bir araya getiren interaktif bir proje.   Bu proje, insanların hayal ettikleri evi dijital ortamda kolayca planlayıp görselleştirmelerini sağlar.   Amacımız, tasarım sürecini herkes için erişilebilir ve eğlenceli hale getirmektir.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinematic-planet/hayalimizdeki-ev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cinematic-planet/hayalimizdeki-ev/issues"
+  },
+  "homepage": "https://github.com/cinematic-planet/hayalimizdeki-ev#readme"
+}
