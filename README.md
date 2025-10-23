@@ -1,81 +1,131 @@
-🏡 Hayalimizdeki Ev
+# 🏡 Hayalimizdeki Ev
 
-  • Kişisel web tasarımı projesi — modern, kullanıcı dostu ve ilham verici bir ev konseptini dijital ortamda tasarlamak için oluşturulmuştur.
-  
-  ✨ Geliştirici
+**Hayalimizdeki Ev**, modern mimariyi ve kullanıcı odaklı tasarımı bir araya getiren interaktif bir proje.  
+Bu proje, insanların hayal ettikleri evi dijital ortamda kolayca planlayıp görselleştirmelerini sağlar.  
+Amacımız, tasarım sürecini herkes için erişilebilir ve eğlenceli hale getirmektir.
 
-  👤 @cinematic-planet
+---
 
-  💬 Web Tasarımı & Python Geliştiricisi Adayı
-  📍 “Kodu öğrenmek, hayal gücünü gerçeğe dönüştürmenin en etkili yoludur.”
+## ✨ Özellikler
 
-  📜 Lisans
+- 🧱 3D ev planlama arayüzü  
+- 🎨 Gerçek zamanlı renk ve malzeme değişimi  
+- 💾 Proje kaydetme ve dışa aktarma desteği  
+- 🌐 Web tabanlı kullanıcı arayüzü  
+- 🧠 Yapay zekâ destekli tasarım önerileri *(yakında)*  
 
-  Bu proje kişisel öğrenme amaçlıdır.
-  Kodlar üzerinde değişiklik yapabilir, kendi çalışmalarında ilham olarak kullanabilirsin.
-  Ticari kullanım veya yeniden dağıtım için lütfen kaynak belirt.
+---
 
-🎯 Proje Hakkında
+## 🧩 Kullanılan Teknolojiler
 
-  Hayalimizdeki Ev, HTML, CSS, JavaScript ve PHP kullanılarak geliştirilen bir web projesidir.
-  
-  Amaç, kullanıcıya evin farklı bölümlerini (örneğin salon, mutfak, çalışma odası) gezebileceği, etkileşimli ve estetik bir deneyim sunmaktır.
-  
-  Bu proje aynı zamanda web tasarımı öğrenme sürecimin bir parçasıdır.
-  
-  HTML yapısı, CSS düzeni, JavaScript etkileşimi ve PHP backend entegrasyonunun birlikte nasıl çalıştığını göstermek hedeflenmiştir.
+| Teknoloji | Açıklama |
+|------------|-----------|
+| **React / Next.js** | Ön yüz geliştirme |
+| **Tailwind CSS** | Arayüz tasarımı |
+| **Three.js** | 3D modelleme ve sahneleme |
+| **Node.js** | Sunucu tarafı işlemler |
+| **Vercel** | Dağıtım ve barındırma |
 
-🧰 Kullanılan Teknolojiler
+---
 
-🌐 Frontend
+## ⚙️ Kurulum
 
-  • HTML5 → Sayfa yapısı ve semantik düzen için.
-  
-  • CSS3 → Tasarım, renk paleti, tipografi ve responsive düzen için.
-  
-  • JavaScript (Vanilla JS) → Sayfa etkileşimleri, animasyonlar ve formlar için.
+Projeyi yerel ortamınızda çalıştırmak için:
 
-⚙️ Backend
+```bash
+# Depoyu klonlayın
+git clone https://github.com/cinematic-planet/hayalimizdeki-ev.git
 
-  • PHP → Form işlemleri, sunucu tarafı veri yönetimi ve dinamik içerik üretimi için.
+# Proje dizinine gidin
+cd hayalimizdeki-ev
 
-🧩 Kaynak Yönetimi & Sürüm Kontrol
+# Bağımlılıkları yükleyin
+npm install
 
-  • Git & GitHub → Versiyon kontrolü, paylaşım ve ekip işbirliği için.
+# Geliştirme sunucusunu başlatın
+npm run dev
+```
 
-🎨 Tasarım & Medya
+Daha sonra tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açarak projeyi çalıştırabilirsiniz.
 
-  • Özel görseller ve ikonlar → Projede kullanılan medya dosyaları.
-  
-  • Google Fonts → Modern tipografi desteği.
+---
 
-  💡 Gelecek Planları
+## 🚀 Kullanım
 
-Bu proje sürekli geliştirilmeye açıktır.
-Planlanan iyileştirmeler:
+1. Ana ekrandan "Yeni Proje" seçeneğiyle başlayın.  
+2. Duvar, pencere ve kapı bileşenlerini sahneye ekleyin.  
+3. Renk paleti ve malzeme seçeneklerinden seçim yapın.  
+4. “Kaydet” veya “Dışa Aktar” ile projenizi paylaşın.  
 
-📱 Mobil uyumluluk (Responsive tasarım)
+💡 *İpucu:* Oturum açarsanız, tasarımlarınız bulut üzerinde saklanır ve her cihazdan erişebilirsiniz.
 
-  • 🪶 Daha modern CSS yapısı (ör. Tailwind / SCSS)
+---
 
-  • ⚙️ Backend güvenliği ve form doğrulama geliştirmeleri
+## 🧠 Yol Haritası
 
-  • 🧠 Yeni sayfalar / oda temaları ekleme
+- [ ] Yapay zekâ destekli plan önerileri  
+- [ ] Oda ölçüm ve alan hesaplayıcı  
+- [ ] Mobil uyumlu arayüz  
+- [ ] Çoklu kullanıcı desteği  
+- [ ] VR entegrasyonu  
 
-  • 🌙 Karanlık mod (Dark Mode)
+---
 
-  • 🧩 React veya Vue sürümü (ilerleyen aşamada) 
-  
-🤝 Katkıda Bulunma
+## 🤝 Katkıda Bulunma
 
-  ► Projeye katkıda bulunmak istersen:
+Katkılar her zaman memnuniyetle karşılanır! 🎉  
+Lütfen bir değişiklik göndermeden önce bir **issue** açın.
 
-  2 Bu repoyu fork et
+1. Fork oluşturun  
+2. Yeni bir dal açın  
+   ```bash
+   git checkout -b feature/YeniOzellik
+   ```
+3. Değişikliklerinizi yapın ve commit edin  
+4. Pull request gönderin  
 
-  3 Yeni bir dal oluştur: git checkout -b yeni-ozellik
+---
 
-  4 Değişikliklerini yap ve commit et
+## 🖼️ Ekran Görüntüsü
 
-  5 Pull request gönder 🎉
-  
-  
+> Henüz örnek bir görsel eklenmemiş.  
+> Lütfen `assets/preview.png` veya `assets/demo.gif` dosyasını bu bölüme ekleyin.
+
+```markdown
+![Proje Önizleme](./assets/preview.png)
+```
+
+---
+
+## 🏷️ Rozetler
+
+Ekleyebileceğiniz örnek rozetler:
+
+```markdown
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Build](https://img.shields.io/github/actions/workflow/status/cinematic-planet/hayalimizdeki-ev/build.yml)
+![Last Commit](https://img.shields.io/github/last-commit/cinematic-planet/hayalimizdeki-ev)
+![Contributors](https://img.shields.io/github/contributors/cinematic-planet/hayalimizdeki-ev)
+```
+
+---
+
+## 🪪 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) kapsamında lisanslanmıştır.  
+© 2025 Cinematic Planet
+
+---
+
+## 🌍 Diğer Diller
+
+- [English README](README.en.md) *(yakında)*
+
+---
+
+## 💬 İletişim
+
+**Proje ekibi:** [Cinematic Planet](https://github.com/cinematic-planet)  
+Sorularınız veya önerileriniz için: [issues sayfası](https://github.com/cinematic-planet/hayalimizdeki-ev/issues)
+
+---
