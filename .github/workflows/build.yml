@@ -1,0 +1,31 @@
+
+
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu klonla
+        uses: actions/checkout@v3
+
+      - name: Node.js ortamını kur
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Bağımlılıkları yükle
+        run: npm install
+
+      - name: Projeyi derle
+        run: npm run build
+
+      - name: Testleri çalıştır (varsa)
+        run: npm test --if-present
