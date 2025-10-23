@@ -1,0 +1,31 @@
+name: Build and Test
+
+# Ne zaman çalışsın?
+on:
+  push:
+    branches: [ main ]   # main branch'e commit atıldığında
+  pull_request:
+    branches: [ main ]   # PR geldiğinde
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu klonla
+        uses: actions/checkout@v3
+
+      - name: Node.js ortamını kur
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Bağımlılıkları yükle
+        run: npm install
+
+      - name: Projeyi derle
+        run: npm run build
+
+      # Opsiyonel: Test varsa ekle
+      - name: Testleri çalıştır (varsa)
+        run: npm test --if-present

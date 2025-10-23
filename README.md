@@ -6,6 +6,17 @@ Amacımız, tasarım sürecini herkes için erişilebilir ve eğlenceli hale get
 
 ---
 
+## 🏷️ Rozetler
+
+![Build](https://img.shields.io/github/actions/workflow/status/cinematic-planet/hayalimizdeki-ev/build.yml?branch=main)
+![License](https://img.shields.io/github/license/cinematic-planet/hayalimizdeki-ev)
+![Last Commit](https://img.shields.io/github/last-commit/cinematic-planet/hayalimizdeki-ev)
+![Contributors](https://img.shields.io/github/contributors/cinematic-planet/hayalimizdeki-ev)
+![Issues](https://img.shields.io/github/issues/cinematic-planet/hayalimizdeki-ev)
+![Stars](https://img.shields.io/github/stars/cinematic-planet/hayalimizdeki-ev?style=social)
+
+---
+
 ## ✨ Özellikler
 
 - 🧱 3D ev planlama arayüzü  
@@ -86,40 +97,10 @@ Lütfen bir değişiklik göndermeden önce bir **issue** açın.
 
 ---
 
-## 🖼️ Ekran Görüntüsü
-
-> Henüz örnek bir görsel eklenmemiş.  
-> Lütfen `assets/preview.png` veya `assets/demo.gif` dosyasını bu bölüme ekleyin.
-
-```markdown
-![Proje Önizleme](./assets/preview.png)
-```
-
----
-
-## 🏷️ Rozetler
-
-Ekleyebileceğiniz örnek rozetler:
-
-```markdown
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Build](https://img.shields.io/github/actions/workflow/status/cinematic-planet/hayalimizdeki-ev/build.yml)
-![Last Commit](https://img.shields.io/github/last-commit/cinematic-planet/hayalimizdeki-ev)
-![Contributors](https://img.shields.io/github/contributors/cinematic-planet/hayalimizdeki-ev)
-```
-
----
-
 ## 🪪 Lisans
 
 Bu proje [MIT Lisansı](LICENSE) kapsamında lisanslanmıştır.  
 © 2025 Cinematic Planet
-
----
-
-## 🌍 Diğer Diller
-
-- [English README](README.en.md) *(yakında)*
 
 ---
 
