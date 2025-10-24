@@ -1,0 +1,11 @@
+# Force GitHub Linguist to detect correct languages
+*.html linguist-language=HTML
+*.css linguist-language=CSS
+*.js linguist-language=JavaScript
+
+# Ignore non-code files in language statistics
+*.md linguist-detectable=false
+*.txt linguist-detectable=false
+*.yml linguist-detectable=false
+*.json linguist-detectable=false
+LICENSE linguist-detectable=false
