@@ -1,5 +1,11 @@
 // three.module.js
 
+export class Color {
+  constructor(hex) {
+    this.hex = hex;
+  }
+}
+
 export class Scene {
   constructor() {
     this.children = [];
@@ -10,29 +16,36 @@ export class Scene {
   }
 }
 
-export class Color {
-  constructor(hex) {
-    this.hex = hex;
-  }
-}
-
 export class PerspectiveCamera {
   constructor(fov, aspect, near, far) {
     this.fov = fov;
     this.aspect = aspect;
     this.near = near;
     this.far = far;
-    this.position = { set: () => {} };
+    this.position = {
+      x: 0, y: 0, z: 0,
+      set: function(x, y, z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+      }
+    };
   }
   updateProjectionMatrix() {}
 }
 
 export class WebGLRenderer {
-  constructor() {
+  constructor(params) {
     this.domElement = document.createElement('canvas');
+    this.context = this.domElement.getContext('webgl');
   }
-  setSize() {}
-  render() {}
+  setSize(width, height) {
+    this.domElement.width = width;
+    this.domElement.height = height;
+  }
+  render(scene, camera) {
+    // Sahne render simülasyonu (boş)
+  }
 }
 
 export class PlaneGeometry {
@@ -53,7 +66,14 @@ export class Mesh {
     this.geometry = geometry;
     this.material = material;
     this.rotation = { x: 0, y: 0 };
-    this.position = { x: 0, y: 0, z: 0, set: function(x, y, z) { this.x = x; this.y = y; this.z = z; } };
+    this.position = {
+      x: 0, y: 0, z: 0,
+      set: function(x, y, z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+      }
+    };
   }
 }
 
@@ -61,7 +81,13 @@ export class PointLight {
   constructor(color, intensity) {
     this.color = color;
     this.intensity = intensity;
-    this.position = { set: function(x, y, z) { this.x = x; this.y = y; this.z = z; } };
+    this.position = {
+      x: 0, y: 0, z: 0,
+      set: function(x, y, z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+      }
+    };
   }
 }
-
