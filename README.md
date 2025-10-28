@@ -31,11 +31,11 @@ Amacımız, tasarım sürecini herkes için erişilebilir ve eğlenceli hale get
 
 | Teknoloji | Açıklama |
 |------------|-----------|
-| **React / Next.js** | Ön yüz geliştirme |
-| **Tailwind CSS** | Arayüz tasarımı |
-| **Three.js** | 3D modelleme ve sahneleme |
-| **Node.js** | Sunucu tarafı işlemler |
-| **Vercel** | Dağıtım ve barındırma |
+## 🛠️ Kullanılan Teknolojiler
+
+- **HTML5 & CSS3** – Sayfa yapısı ve şiirsel stil düzenlemeleri
+- **JavaScript** – Yıldız efekti ve etkileşimli öğeler
+- **Google Fonts** – `Dancing Script` ve `Lato` ile duygusal tipografi
 
 ---
 
