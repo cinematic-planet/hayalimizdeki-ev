@@ -10,6 +10,12 @@ export class Scene {
   }
 }
 
+export class Color {
+  constructor(hex) {
+    this.hex = hex;
+  }
+}
+
 export class PerspectiveCamera {
   constructor(fov, aspect, near, far) {
     this.fov = fov;
@@ -58,3 +64,4 @@ export class PointLight {
     this.position = { set: function(x, y, z) { this.x = x; this.y = y; this.z = z; } };
   }
 }
+
